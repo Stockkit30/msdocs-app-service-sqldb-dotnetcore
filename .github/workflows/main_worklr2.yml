@@ -36,7 +36,7 @@ jobs:
         run: find . -name "*.csproj" -type f
 
       - name: dotnet bundle migration 
-        run: dotnet ef migrations bundle --runtime linux-x64 --project DotNetCoreSqlDb/DotNetCoreSqlDb.csproj -o /usr/share/dotnet/myapp/migrate
+        run: dotnet ef migrations bundle --runtime linux-x64 --project DotNetCoreSqlDb.csproj -o /usr/share/dotnet/myapp/migrate
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
